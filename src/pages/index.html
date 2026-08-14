@@ -1,0 +1,399 @@
+<main>
+        <!-- 2. 首屏大图轮播区 (Apple风极致留白 + 暗色背景自适应) -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0c] mt-16">
+            <!-- 轮播图幻灯片 -->
+            <div id="carousel" class="relative w-full h-full" role="region" aria-roledescription="carousel" aria-label="Featured highlights">
+                <!-- 幻灯片 1 -->
+                <div class="carousel-item absolute inset-0 opacity-100 z-10">
+                    <img src="https://i.ibb.co/RTr8DKrf/1-1.avif" alt="MUSE MARINE Industrial Ship Battery Technology" class="object-cover w-full h-full opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold mb-3">Premium Energy</span>
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Reliable Power at Sea.</h1>
+                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">Industry-leading marine small batteries designed for extreme maritime conditions.</p>
+                        
+                        <!-- 优化后的 “Explore Products” 按钮 -->
+                        <a href="products.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:bg-gray-50 hover:shadow-xl transition-all duration-300 transform shadow-md">
+                            Explore Products
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- 幻灯片 2 -->
+                <div class="carousel-item absolute inset-0 opacity-0 z-0">
+                    <img src="https://i.ibb.co/F4F5BzLK/Gemini-Generated-Image-b4xhq4b4xhq4b4xh-2.avif" alt="Advanced Ship GMDSS Electronics" class="object-cover w-full h-full opacity-50">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold mb-3">Communication & Electronics</span>
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Advanced Ship Electronics.</h1>
+                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">Ensuring seamless communication and operation across the global fleet.</p>
+                        
+                        <!-- 幻灯片 2 对应的按钮 -->
+                        <a href="products.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:bg-gray-50 hover:shadow-xl transition-all duration-300 transform shadow-md">
+                            Explore Products
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 左右切换控制键 -->
+            <button id="prev-slide" class="absolute left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-colors z-30" aria-label="Previous Slide">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="next-slide" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-colors z-30" aria-label="Next Slide">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+            <button id="carousel-pause" type="button" class="absolute top-24 right-6 text-white/60 hover:text-white transition-colors z-30" aria-label="Pause slideshow" aria-pressed="false">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6"/></svg>
+            </button>
+            
+            <!-- 底部导航指示器 -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
+                <button type="button" class="indicator w-12 h-1 rounded-full bg-white transition-all duration-300" aria-label="Go to slide 1"></button>
+                <button type="button" class="indicator w-12 h-1 rounded-full bg-white/40 transition-all duration-300" aria-label="Go to slide 2"></button>
+            </div>
+        </section>
+
+        <!-- 3. Core Product Showcase (核心产品展示 - 卡片网格布局) -->
+        <section class="py-24 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Core Products.</h2>
+                <p class="text-appleMuted text-lg max-w-2xl mx-auto">Engineered for durability, meeting strict international IMPA and SOLAS maritime standards.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 窗口 1：船舶自动化与PLC备份电源 -->
+                <a href="products.html?category=battery" class="block fade-in">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col h-full text-center">
+                        <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Marine Automation & PLC Backup</h3>
+                        <p class="text-xs text-appleBlue font-semibold uppercase tracking-wider mb-3">Saft LS14500 | Mitsubishi Q6BAT | Omron/Toshiba</p>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            Engineered for 100% seamless OEM replacement. Boasting exceptional high and low temperature resilience to guarantee zero data loss in vital engine room control systems.
+                        </p>
+                        <span class="mt-auto text-appleBlue font-semibold text-sm hover:underline">Learn more ></span>
+                    </div>
+                </a>
+                
+                <!-- 窗口 2：应急、通信与导航备件 -->
+                <a href="products.html?category=electronics" class="block fade-in delay-100">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center h-full text-center">
+                        <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 11-6 0 3 3 0 016 0zM5.05 6.05a10 10 0 0113.9 0M7.07 8.07a7 7 0 019.86 0"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Emergency & Navigation Spares</h3>
+                        <p class="text-xs text-appleBlue font-semibold uppercase tracking-wider mb-3">Panasonic BR2032 | CR18505 | Pre-Wired Assemblies</p>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            Fully compliant with maritime safety regulations. Specially developed as critical power spares for global GMDSS, VDR, and marine cabin smoke safety networks.
+                        </p>
+                        <span class="mt-auto text-appleBlue font-semibold text-sm hover:underline">Learn more ></span>
+                    </div>
+                </a>
+
+                <!-- 窗口 3：关键海事充电系统与模块 -->
+                <a href="products.html?category=power-station" class="block fade-in delay-200">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center h-full text-center">
+                        <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Critical Charging & Modules</h3>
+                        <p class="text-xs text-appleBlue font-semibold uppercase tracking-wider mb-3">Lifeboat Chargers CD4212/CY1 | Weidmüller Power</p>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            Strictly matching international SOLAS protocols. Designed for robust, reliable emergency electrical replenishment inside highly punishing ocean environments.
+                        </p>
+                        <span class="mt-auto text-appleBlue font-semibold text-sm hover:underline">Learn more ></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Selected Global Cases (精选全球工程案例) -->
+        <section class="py-24 px-4 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 fade-in">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">Proven Track Record</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Global Deployments.</h2>
+                        <p class="text-appleMuted text-lg max-w-xl">Trusted maritime power and electronics integrations in challenging oceanic tasks.</p>
+                    </div>
+                    <a href="cases.html" class="mt-4 md:mt-0 inline-flex items-center text-appleBlue font-semibold hover:text-blue-700 hover:underline transition-all group">
+                        Explore all success stories
+                        <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 案例 1 -->
+                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in">
+                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80" alt="Container Ship Integration" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Ocean Vessel Fleet</span>
+                            <h3 class="text-xl font-bold mb-3 text-appleDark">150,000 DWT Container Fleet Backup System Upgrade</h3>
+                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                                Fully retrofitted 45 large container carriers with our ultra-reliable GMDSS & PLC backup lithium batteries, ensuring zero uninterrupted navigation communication.
+                            </p>
+                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
+                                View case details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 案例 2 -->
+                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in delay-100">
+                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=800&q=80" alt="Offshore Drilling Platform" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Offshore & Energy</span>
+                            <h3 class="text-xl font-bold mb-3 text-appleDark">North Sea Floating Drilling Platform Power Overhaul</h3>
+                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                                Engineered a specialized, wide-temperature-tolerant battery solution to maintain sensor logging accuracy on high-vibration engine controls in sub-zero environments.
+                            </p>
+                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
+                                View case details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 案例 3 -->
+                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in delay-200">
+                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
+                            <img src="https://images.unsplash.com/photo-1502481851512-e9e2529bbbf9?auto=format&fit=crop&w=800&q=80" alt="Lifeboat System Verification" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Safety Electronics</span>
+                            <h3 class="text-xl font-bold mb-3 text-appleDark">SOLAS Compliant Lifeboat CD4212 Charger Delivery</h3>
+                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                                Standardized and supplied emergency electrical power systems for state-of-the-art rescue boats, establishing top safety metrics on premium cruise lines.
+                            </p>
+                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
+                                View case details
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Environmental Responsibility & Sustainability (环保与可持续发展 - 新增板块) -->
+        <section class="py-24 px-4 bg-appleGreen text-white border-t border-emerald-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- 左侧：文字品牌宣言 (带有淡淡的绿色微光效果) -->
+                    <div class="lg:col-span-5 fade-in">
+                        <span class="text-xs uppercase tracking-widest text-appleEmerald font-semibold block mb-3">Green Maritime Initiative</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">Respecting the Ocean.<br>Sustaining the Future.</h2>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+                            At MUSE MARINE, eco-responsibility is not a checklist — it is our fundamental design directive. We protect our oceans and environment by engineering clean, long-cycle energy and minimizing ecological footprints at every voyage.
+                        </p>
+                        <!-- 极简可持续发展指标 -->
+                        <div class="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
+                            <div>
+                                <div class="text-2xl md:text-3xl font-bold text-appleEmerald mb-1">100%</div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wider">Mercury & Cadmium Free</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl md:text-3xl font-bold text-appleEmerald mb-1">10 Years</div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wider">Average Cell Shelf Life</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧：三个精细化环保承诺卡片 -->
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- 环保承诺 1 -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-100 flex flex-col h-full">
+                            <div class="w-10 h-10 rounded-full bg-appleEmerald/10 flex items-center justify-center mb-6 text-appleEmerald">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Clean Battery Chemistry</h3>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                Our lithium cells completely eliminate harmful heavy metals like cadmium, lead, and mercury, ensuring zero marine environmental pollution in case of emergencies.
+                            </p>
+                        </div>
+
+                        <!-- 环保承诺 2 -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-200 flex flex-col h-full">
+                            <div class="w-10 h-10 rounded-full bg-appleEmerald/10 flex items-center justify-center mb-6 text-appleEmerald">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Global Recycling Program</h3>
+                            <p class="text-sm text-gray-300 leading-relaxed">
+                                We run active hazardous collection partnerships at key global ports. This ensures discarded lithium back-ups are safely recovered and responsibly re-processed.
+                            </p>
+                        </div>
+
+                        <!-- 环保承诺 3 -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-300 flex flex-col h-full sm:col-span-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Sustainable Carbon Offsets & Life-cycle Design</h3>
+                                    <p class="text-sm text-gray-300 leading-relaxed">
+                                        By engineering battery packs with up to 10-year shelf storage, we significantly reduce the frequency of spare replacements, lowering manufacturing waste, supply shipping carbon, and overall maritime impact.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Latest News & Insights (最新动态与行业见解) -->
+        <section class="py-24 px-4 bg-appleGray border-t border-gray-100">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 fade-in">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">Industry Hub</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Latest Insights.</h2>
+                        <p class="text-appleMuted text-lg max-w-xl">Stay tuned for international maritime certification news, technological updates, and product launches.</p>
+                    </div>
+                    <a href="news.html" class="mt-4 md:mt-0 inline-flex items-center text-appleBlue font-semibold hover:text-blue-700 hover:underline transition-all group">
+                        Browse all news articles
+                        <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 新闻 1 -->
+                    <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-2.5 py-1 bg-blue-50 text-appleBlue text-xs font-semibold rounded-full uppercase">Compliance</span>
+                            <span class="text-xs text-appleMuted">May 12, 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
+                            <a href="news.html">MUSE MARINE Batteries Pass Enhanced SOLAS Safety Certification</a>
+                        </h3>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            We are proud to announce that our custom backup batteries and lifeboat chargers passed the stringent upgraded maritime authority compliance standard successfully.
+                        </p>
+                        <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
+                            Read article 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </article>
+
+                    <!-- 新闻 2 -->
+                    <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in delay-100">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-2.5 py-1 bg-green-50 text-green-600 text-xs font-semibold rounded-full uppercase">Technology</span>
+                            <span class="text-xs text-appleMuted">April 28, 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
+                            <a href="news.html">Next-Generation wide-temperature Marine Small Cells Developed</a>
+                        </h3>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            Innovating next-gen chemistry to secure an unprecedented 10-year storage shelf-life for safety systems located on harsh remote ocean buoys.
+                        </p>
+                        <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
+                            Read article 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </article>
+
+                    <!-- 新闻 3 -->
+                    <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in delay-200">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-2.5 py-1 bg-purple-50 text-purple-600 text-xs font-semibold rounded-full uppercase">Global Expo</span>
+                            <span class="text-xs text-appleMuted">April 15, 2026</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
+                            <a href="news.html">Highlighting Key Marine Equipment Innovations at Posidonia 2026</a>
+                        </h3>
+                        <p class="text-appleMuted text-sm leading-relaxed mb-6">
+                            Visit our engineering team as we present specialized automation hardware, PLC replacements, and modern intelligent power controllers.
+                        </p>
+                        <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
+                            Read article 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Brief About/Teaser Section (导流板块，闭环链接跳转) -->
+        <section class="bg-white py-24 px-4 border-t border-gray-100">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl font-bold mb-6 text-appleDark">Designed for the Ocean.</h2>
+                <p class="text-xl text-appleMuted leading-relaxed mb-8">
+                    Since our founding, MUSE MARINE has been dedicated to providing the highest quality marine equipment. 
+                    From industrial batteries to advanced navigation electronics, our products are trusted by fleets worldwide.
+                </p>
+                <a href="about.html" class="inline-flex items-center text-appleBlue hover:text-blue-700 font-semibold text-lg hover:underline transition-all">
+                    Read our story
+                    <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </section>
+</main>
+
+<script>
+  (function () {
+    var slides = document.querySelectorAll('.carousel-item');
+    var indicators = document.querySelectorAll('.indicator');
+    var prev = document.getElementById('prev-slide');
+    var next = document.getElementById('next-slide');
+    var pauseBtn = document.getElementById('carousel-pause');
+    var current = 0;
+    var timer = null;
+    var total = slides.length;
+
+    function update() {
+      slides.forEach(function (s, i) {
+        var on = i === current;
+        s.classList.toggle('opacity-100', on);
+        s.classList.toggle('z-10', on);
+        s.classList.toggle('opacity-0', !on);
+        s.classList.toggle('z-0', !on);
+      });
+      indicators.forEach(function (ind, i) {
+        ind.classList.toggle('bg-white', i === current);
+        ind.classList.toggle('bg-white/40', i !== current);
+      });
+    }
+
+    function nextSlide() { current = (current + 1) % total; update(); }
+    function prevSlide() { current = (current - 1 + total) % total; update(); }
+    function start() {
+      stop();
+      timer = setInterval(nextSlide, 5000);
+      if (pauseBtn) { pauseBtn.setAttribute('aria-label', 'Pause slideshow'); pauseBtn.setAttribute('aria-pressed', 'false'); }
+    }
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+      if (pauseBtn) { pauseBtn.setAttribute('aria-label', 'Play slideshow'); pauseBtn.setAttribute('aria-pressed', 'true'); }
+    }
+
+    if (prev) prev.addEventListener('click', function () { prevSlide(); start(); });
+    if (next) next.addEventListener('click', function () { nextSlide(); start(); });
+    indicators.forEach(function (ind, i) {
+      ind.addEventListener('click', function () { current = i; update(); start(); });
+    });
+    if (pauseBtn) {
+      pauseBtn.addEventListener('click', function () {
+        if (timer) stop(); else start();
+      });
+    }
+
+    update();
+    start();
+  })();
+</script>

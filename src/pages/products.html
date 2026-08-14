@@ -1,0 +1,217 @@
+<main class="pt-16">
+        <!-- 2. Products Hero Section (大留白大气产品视觉头部) -->
+        <section class="bg-white py-20 md:py-32 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+                <span class="text-sm uppercase tracking-widest text-appleMuted font-semibold font-mono">Precision Marine Power</span>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-appleDark mt-3 mb-6">
+                    Powering Maritime Excellence.
+                </h1>
+                <p class="text-lg md:text-xl text-appleMuted max-w-3xl mx-auto leading-relaxed">
+                    Explore our fully certified marine industrial small batteries and high-precision communication electronic systems. Engineered under absolute sea conditions.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Category Filters (苹果风极简分类过滤器，通过原生 JS 控制切换) -->
+        <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-3 mb-16 fade-in">
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-6 py-2.5 bg-appleDark text-white text-sm font-medium rounded-full shadow-sm hover:opacity-95 transition-all">All Products</button>
+                <button onclick="filterCategory('battery')" id="btn-battery" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">Marine Batteries</button>
+                <button onclick="filterCategory('electronics')" id="btn-electronics" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">Vessel Electronics</button>
+                <button onclick="filterCategory('power-station')" id="btn-power-station" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">Backup Power Stations</button>
+            </div>
+
+            <!-- 4. Products Grid (卡片网格布局，内置海事参数与 IMPA 码) -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 产品 1 (电池分类) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="battery">
+                    <!-- 示意图容器 -->
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 170101</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">MUSE Pro LiFePO4 Battery</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">High-performance lithium iron phosphate battery for vessel backup, featuring integrated safe BMS systems and salt fog defense.</p>
+                    
+                    <!-- 真实的详细参数技术列表，极大强化产品内容 SEO -->
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Nominal Voltage:</span><span class="font-semibold text-appleDark">12.8 V</span></div>
+                        <div class="flex justify-between"><span>Rated Capacity:</span><span class="font-semibold text-appleDark">200 Ah (2560 Wh)</span></div>
+                        <div class="flex justify-between"><span>Cycle Life:</span><span class="font-semibold text-appleDark">&gt; 4000 Cycles @ 80% DOD</span></div>
+                        <div class="flex justify-between"><span>IP Protection:</span><span class="font-semibold text-appleDark">IP67 Waterproof</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-blue-50 text-appleBlue px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                        <a href="contact.html?product=impa170101" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品 2 (电子分类) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-100" data-category="electronics">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 370258</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">VHF GMDSS Communication Unit</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">Professional marine communication transceiver system compliant with SOLAS regulations for international shipping containers.</p>
+                    
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Frequency Range:</span><span class="font-semibold text-appleDark">156.025 - 162.025 MHz</span></div>
+                        <div class="flex justify-between"><span>RF Power Output:</span><span class="font-semibold text-appleDark">25 W / 1 W selectable</span></div>
+                        <div class="flex justify-between"><span>Battery Life:</span><span class="font-semibold text-appleDark">Up to 12 Hours Duty Cycle</span></div>
+                        <div class="flex justify-between"><span>Certification:</span><span class="font-semibold text-appleDark">MED / Wheelmark Approved</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-blue-50 text-appleBlue px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                        <a href="contact.html?product=impa370258" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品 3 (电源基站分类) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-200" data-category="power-station">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 170245</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">Portable Marine Power Station</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">Rugged backup energy module designed for crew electronics maintenance and emergency distress operations on ocean liners.</p>
+                    
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Capacity Output:</span><span class="font-semibold text-appleDark">1000 W (Peak 1500W)</span></div>
+                        <div class="flex justify-between"><span>Battery Chemistry:</span><span class="font-semibold text-appleDark">Lithium Cobalt Oxide</span></div>
+                        <div class="flex justify-between"><span>Charging Ports:</span><span class="font-semibold text-appleDark">AC / DC / Type-C PD 100W</span></div>
+                        <div class="flex justify-between"><span>Shell Design:</span><span class="font-semibold text-appleDark">Anti-impact Heavy Polymer</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">Build to Order</span>
+                        <a href="contact.html?product=impa170245" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品 4 (电池分类 - 第二代锂电池) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="battery">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.907c.961 0 1.36 1.24.588 1.81l-3.97 2.885a1 1 0 00-.364 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.971-2.885a1 1 0 00-1.18 0l-3.97 2.885c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.364-1.118L2.49 10.1c-.773-.57-.375-1.81.587-1.81h4.907a1 1 0 00.95-.69l1.52-4.674z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 170115</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">MUSE Extreme AGM Storage Battery</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">Maintenance-free lead-acid AGM storage cell tailored for ship engine ignition under harsh cold maritime climates.</p>
+                    
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Nominal Voltage:</span><span class="font-semibold text-appleDark">12 V</span></div>
+                        <div class="flex justify-between"><span>CCA Rating:</span><span class="font-semibold text-appleDark">1050 A (Cold Cranking)</span></div>
+                        <div class="flex justify-between"><span>Resistance:</span><span class="font-semibold text-appleDark">Ultra-low Internal ESR</span></div>
+                        <div class="flex justify-between"><span>Design Life:</span><span class="font-semibold text-appleDark">8 - 10 Years Floated</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-blue-50 text-appleBlue px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                        <a href="contact.html?product=impa170115" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品 5 (电子分类 - 双向对讲) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-100" data-category="electronics">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 370124</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">Two-Way Marine Walkie-Talkie</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">Explosion-proof intrinsically safe portable transceiver system, crucial for crew communication on tanker decks.</p>
+                    
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Explosion-proof:</span><span class="font-semibold text-appleDark">ATEX Class Ex-ib IIB T4</span></div>
+                        <div class="flex justify-between"><span>Battery Module:</span><span class="font-semibold text-appleDark">Rechargeable Li-ion 2200mAh</span></div>
+                        <div class="flex justify-between"><span>Ingress Standard:</span><span class="font-semibold text-appleDark">Dustproof & IP68 Sealed</span></div>
+                        <div class="flex justify-between"><span>Channels:</span><span class="font-semibold text-appleDark">16 Dedicated Marine Channels</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-blue-50 text-appleBlue px-2.5 py-1 rounded-full font-medium">In Stock</span>
+                        <a href="contact.html?product=impa370124" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品 6 (电源基站分类 - 重型模块) -->
+                <div class="product-card bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-200" data-category="power-station">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
+                        <svg class="w-16 h-16 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <span class="text-xs font-semibold text-appleBlue uppercase tracking-wider mb-2">IMPA Code: 170251</span>
+                    <h3 class="text-xl font-bold text-appleDark mb-2">Vessel Uninterruptible Power Supply (UPS)</h3>
+                    <p class="text-appleMuted text-sm mb-6 leading-relaxed">Integrated bridge rack-mounted marine online UPS, protecting communication panels against main generator trips.</p>
+                    
+                    <div class="border-t border-gray-100 pt-4 mb-6 text-xs text-appleMuted space-y-2">
+                        <div class="flex justify-between"><span>Power Rating:</span><span class="font-semibold text-appleDark">3 KVA / 2700 W</span></div>
+                        <div class="flex justify-between"><span>Input Waveform:</span><span class="font-semibold text-appleDark">Pure Sine Wave</span></div>
+                        <div class="flex justify-between"><span>Transfer Time:</span><span class="font-semibold text-appleDark">0 ms (Online double-conversion)</span></div>
+                        <div class="flex justify-between"><span>Enclosure Case:</span><span class="font-semibold text-appleDark">Standard 19-inch 2U Rack</span></div>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
+                        <span class="text-xs bg-amber-50 text-amber-700 px-2.5 py-1 rounded-full font-medium">Build to Order</span>
+                        <a href="contact.html?product=impa170251" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Bottom Call to Action (闭环链接跳转) -->
+        <section class="bg-white py-24 px-4 border-t border-gray-100">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h2 class="text-3xl font-bold mb-6 tracking-tight">Need Custom Marine Specifications?</h2>
+                <p class="text-lg text-appleMuted leading-relaxed mb-8 max-w-2xl mx-auto">
+                    MUSE MARINE provides bespoke engineering options for non-standard voltages, capacities, and custom dimensions. Speak directly with our sales engineers.
+                </p>
+                <a href="contact.html" class="inline-flex items-center px-8 py-3.5 bg-appleDark text-white font-medium rounded-full text-sm hover:bg-appleBlue hover:scale-105 transition-all duration-300 shadow-sm">
+                    Inquire Custom Solutions
+                    <svg class="w-5 h-5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </section>
+</main>
+
+<script>
+  (function () {
+    window.filterCategory = function (category) {
+      var cards = document.querySelectorAll('.product-card');
+      cards.forEach(function (card) {
+        var cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+          setTimeout(function () { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          card.style.display = 'none';
+        }
+      });
+      var buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(function (btn) {
+        var activeId = 'btn-' + category;
+        if (btn.id === activeId) {
+          btn.className = 'filter-btn px-6 py-2.5 bg-appleDark text-white text-sm font-medium rounded-full shadow-sm hover:opacity-95 transition-all';
+        } else {
+          btn.className = 'filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all';
+        }
+      });
+    };
+
+    var params = new URLSearchParams(window.location.search);
+    var cat = params.get('category');
+    if (['battery', 'electronics', 'power-station'].indexOf(cat) !== -1) {
+      window.filterCategory(cat);
+    }
+  })();
+</script>

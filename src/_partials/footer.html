@@ -1,0 +1,40 @@
+<footer class="bg-[#1d1d1f] text-gray-400 py-12 px-4 border-t border-gray-800">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <h4 class="text-white font-semibold mb-4">{{SITE_NAME}}</h4>
+      <p class="text-sm leading-relaxed">Providing top-tier marine industrial small batteries and ship electronics globally.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+        <li><a href="news.html" class="hover:text-white transition-colors">News</a></li>
+        <li><a href="services.html" class="hover:text-white transition-colors">Service Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm">
+        <li>Email: {{SITE_EMAIL}}</li>
+        <li>Phone: {{SITE_PHONE}}</li>
+        <li>Address: {{SITE_ADDRESS}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 text-xs flex flex-col md:flex-row justify-between items-center">
+    <p>&copy; 2026 {{SITE_NAME}}. All rights reserved.</p>
+    <div class="mt-4 md:mt-0 space-x-4">
+      <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<div id="form-toast" role="status" aria-live="polite" class="fixed top-24 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-md border border-gray-200 rounded-2xl px-6 py-4 shadow-xl z-[60] flex items-center space-x-3 opacity-0 translate-y-[-20px] pointer-events-none transition-all duration-300">
+  <svg data-icon class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+  <p data-msg class="text-sm font-medium text-appleDark">Thank you!</p>
+</div>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-8 right-8 bg-white/80 backdrop-blur-md text-appleDark p-3 rounded-full shadow-lg border border-gray-200 opacity-0 translate-y-10 transition-all duration-300 hover:scale-110 z-50">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
