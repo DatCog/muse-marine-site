@@ -35,7 +35,7 @@
 </script>
 
 <script>
-  window.SITE_CONFIG = { formEndpoint: '{{FORM_ENDPOINT}}', salesEmail: '{{SALES_EMAIL}}' };
+  window.SITE_CONFIG = { formEndpoint: '{{FORM_ENDPOINT}}', web3formsKey: '{{WEB3FORMS_KEY}}', salesEmail: '{{SALES_EMAIL}}' };
 
   function buildFormBody(form) {
     var parts = [];
@@ -70,11 +70,19 @@
       var cfg = window.SITE_CONFIG || {};
       var data = new FormData(form);
       if (cfg.formEndpoint) {
+        if (cfg.web3formsKey) data.append('access_key', cfg.web3formsKey);
         fetch(cfg.formEndpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
           .then(function (res) {
             if (!res.ok) throw new Error('HTTP ' + res.status);
-            showFormToast('Thank you! Your request has been submitted.', false);
-            form.reset();
+            return res.json();
+          })
+          .then(function (json) {
+            if (json && json.success) {
+              showFormToast('Thank you! Your request has been submitted.', false);
+              form.reset();
+            } else {
+              throw new Error((json && json.message) || 'Submission failed');
+            }
           })
           .catch(function () {
             showFormToast('Something went wrong. Please email ' + cfg.salesEmail + '.', true);

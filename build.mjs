@@ -12,7 +12,8 @@ const site = {
   email: 'info@musemarine.com',
   salesEmail: 'sales@musemarine.com',
   supportEmail: 'support@musemarine.com',
-  formEndpoint: '',
+  formEndpoint: 'https://api.web3forms.com/submit',
+  web3formsKey: '216f5ebd-b045-4bee-b6c4-6059987b6dc9',
   phone: '+1 (555) 123-4567',
   address: '123 Harbor Way, Port City',
   ogImage: 'https://i.ibb.co/RTr8DKrf/1-1.avif',
@@ -98,6 +99,7 @@ for (const [file, meta] of Object.entries(pages)) {
     .replaceAll('{{SALES_EMAIL}}', site.salesEmail)
     .replaceAll('{{SUPPORT_EMAIL}}', site.supportEmail)
     .replaceAll('{{FORM_ENDPOINT}}', site.formEndpoint)
+    .replaceAll('{{WEB3FORMS_KEY}}', site.web3formsKey)
     .replaceAll('{{SITE_PHONE}}', site.phone)
     .replaceAll('{{SITE_ADDRESS}}', site.address)
     .replaceAll('{{OG_IMAGE}}', site.ogImage)
