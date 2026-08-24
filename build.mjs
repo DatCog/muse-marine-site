@@ -34,8 +34,8 @@ const pages = {
   },
   'products.html': {
     title: 'Marine Industrial Batteries & Ship Electronics | MUSE MARINE',
-    description: "Explore MUSE MARINE's premium industrial ship batteries, portable marine power stations, and GMDSS communication electronics. Highly certified with IMPA standards.",
-    keywords: 'marine battery, ship electronics, IMPA 170101, marine communication, shipboard backup power, MUSE MARINE',
+    description: "Explore MUSE MARINE's 50+ marine industrial battery SKUs - Li-SOCl2 cells, PLC memory backup batteries, coin cells, rechargeable packs, lifeboat chargers and shipboard accessories. IMPA certified.",
+    keywords: 'marine battery, PLC backup battery, Li-SOCl2, LS14500, lifeboat charger, coin cell, ship electronics, IMPA marine products, MUSE MARINE',
     active: 'products',
   },
   'cases.html': {
@@ -131,7 +131,7 @@ fs.writeFileSync(
 const sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'];
 for (const file of Object.keys(pages)) {
   const loc = file === 'index.html' ? site.url + '/' : site.url + '/' + file;
-  sitemap.push('  <url><loc>' + loc + '</loc><lastmod>2026-08-14</lastmod></url>');
+  sitemap.push('  <url><loc>' + loc + '</loc><lastmod>2026-08-24</lastmod></url>');
 }
 sitemap.push('</urlset>');
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap.join('\n') + '\n', 'utf8');
