@@ -16,7 +16,7 @@ const site = {
   web3formsKey: '216f5ebd-b045-4bee-b6c4-6059987b6dc9',
   phone: '+1 (555) 123-4567',
   address: '123 Harbor Way, Port City',
-  ogImage: 'https://i.ibb.co/RTr8DKrf/1-1.avif',
+  ogImage: 'https://musemarine.com/assets/images/hero-1.jpg',
 };
 
 const pages = {
@@ -118,9 +118,17 @@ for (const [file, meta] of Object.entries(pages)) {
   fs.writeFileSync(path.join(DIST, file), out, 'utf8');
 }
 
-for (const f of fs.readdirSync(path.join(SRC, 'assets'))) {
-  fs.copyFileSync(path.join(SRC, 'assets', f), path.join(DIST, 'assets', f));
-}
+// Recursively copy src/assets (including images/) into dist/assets
+const copyDir = (srcDir, distDir) => {
+  fs.mkdirSync(distDir, { recursive: true });
+  for (const f of fs.readdirSync(srcDir)) {
+    const s = path.join(srcDir, f);
+    const d = path.join(distDir, f);
+    if (fs.statSync(s).isDirectory()) copyDir(s, d);
+    else fs.copyFileSync(s, d);
+  }
+};
+copyDir(path.join(SRC, 'assets'), path.join(DIST, 'assets'));
 
 fs.writeFileSync(
   path.join(DIST, 'robots.txt'),

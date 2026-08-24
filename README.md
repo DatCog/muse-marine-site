@@ -22,7 +22,7 @@ src/
   _partials/          head.html / nav.html / footer.html / scripts.html（全站公共部分）
   pages/              index.html 首页、products.html 产品页、about/cases/services/news/contact/privacy/terms
   input.css           Tailwind 入口 + 自定义动画
-  assets/             logo.png、favicon.svg
+  assets/             logo.png、favicon.svg、images/（首页轮播与案例图，全部本地化）
 build.mjs             全站配置 + HTML 拼接 + robots.txt/sitemap.xml 生成
 package.json          npm 脚本（build / dev）
 dist/                 构建产物（git 忽略，不要手改）
@@ -128,10 +128,18 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 | `phone` | `+1 (555) 123-4567` | 真实电话待补 |
 | `address` | `123 Harbor Way, Port City` | 真实地址待补 |
 | `email/salesEmail/supportEmail` | `info@musemarine.com` 等 | 真实邮箱待补 |
-| `ogImage` | i.ibb.co 外链图 | 建议改成本地/正式域名图片 |
+| `ogImage` | `https://musemarine.com/assets/images/hero-1.jpg` | 已本地化，域名上线后自动生效 |
 | `formEndpoint` + `web3formsKey` | web3forms 已配置 | 询盘表单已可用 |
 
 公司 Logo 在 `src/assets/logo.png`（官网导航栏 M 字形 logo），已在导航使用；如需在单据系统等其它地方使用，可从该文件复制。
+
+### 7.1 首页/案例图片与水印维护
+
+- 所有大图存放在 `src/assets/images/`：`hero-1.jpg`、`hero-2.jpg`（首屏轮播）、`case-1.jpg`、`case-2.jpg`、`case-3.jpg`（案例卡片）、`about-1.jpg`（关于页）、`news-1.jpg`/`news-2.jpg`（新闻页），引用路径为 `assets/images/xxx.jpg`；
+- **全部大图已叠加公司 M logo 水印**（右下角，半透明白色约 65% 透明度，带柔和投影），替换图片时请保留水印风格一致；
+- 加水印用工作区 `work/tmp/watermark.py`（Pillow 脚本，参数：logo 宽度约为图宽 12%、边距约 2.5%/3%、透明度 0.65）；
+- 原 hero 图为 AVIF 格式，Pillow 写 AVIF 不可靠，已统一转为 JPG（质量 84）本地化，避免外链依赖；
+- `case-3.jpg` 原 Unsplash 图已 404 下架，换成 Wikimedia Commons 的救生艇吊艇架照片；`news-1.jpg` 原 Unsplash 图也 404，换成 Wikimedia Commons 的船舶机舱集控室照片；news 页头图复用 `case-1.jpg`。
 
 ## 8. 部署与发布
 
@@ -146,6 +154,14 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 `.github/workflows/build.yml`：push 到 `main` 后自动 `pnpm install && pnpm build`，产物 `dist/` 上传为 artifact。站点可部署到 Netlify/Vercel/Cloudflare Pages 等任意静态托管（构建命令 `pnpm build`，输出目录 `dist`）。
 
 ## 9. 版本记录
+
+### v1.1.2（2026-08-24）
+
+- **全站大图（首页 5 张 + 关于页 1 张 + 新闻页 3 处）全部本地化**到 `src/assets/images/`（hero-1/hero-2 由 AVIF 转 JPG），移除 i.ibb.co / Unsplash 外链依赖；
+- **所有大图叠加公司 M logo 水印**（右下角半透明，约 65% 透明度，带柔和投影）；
+- `case-3.jpg` 原图 404，换用 Wikimedia Commons 救生艇吊艇架照片；
+- `build.mjs` 改为递归复制 `src/assets`（此前 images/ 子目录不会被复制到 dist，属修复）；`ogImage` 改为本地 hero-1.jpg；
+- 本 README 补充 7.1 图片与水印维护说明。
 
 ### v1.1.1（2026-08-24）
 
@@ -168,8 +184,7 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 ## 10. 后续待办（下次继续开发时优先）
 
 1. **替换占位联系方式**：真实电话、邮箱、地址、域名（见第 7 节）；
-2. **图片本地化**：hero 轮播图目前在 i.ibb.co 外链，建议下载到 `src/assets/`；
-3. **News 文章页**：新闻卡片目前都指向 `news.html` 本身，需建独立文章页；
-4. **产品图片**：56 个 SKU 目前用 SVG 示意图，后续可逐品类替换成真实产品图（建议先做三大主打品）；
-5. **中英文双语**：如需加中文版，可加 `lang` 参数或独立中文页面；
-6. **与单据系统联动**：客户询价后可用 sg-trade-docs 系统直接出 Quotation/Invoice/DO。
+2. **News 文章页**：新闻卡片目前都指向 `news.html` 本身，需建独立文章页；
+3. **产品图片**：56 个 SKU 目前用 SVG 示意图，后续可逐品类替换成真实产品图（建议先做三大主打品）；若需要 AI 生图或批量配图，需配置生图通道或由用户提供素材；
+4. **中英文双语**：如需加中文版，可加 `lang` 参数或独立中文页面；
+5. **与单据系统联动**：客户询价后可用 sg-trade-docs 系统直接出 Quotation/Invoice/DO。
