@@ -10,7 +10,46 @@
       <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
         <a href="index.html" class="{{NAV_INDEX}} transition-colors">Home</a>
         <a href="about.html" class="{{NAV_ABOUT}} transition-colors">About Us</a>
-        <a href="products.html" class="{{NAV_PRODUCTS}} transition-colors">Products</a>
+        <div class="relative group">
+          <a href="products.html" class="{{NAV_PRODUCTS}} inline-flex items-center gap-1 transition-colors">
+            Products
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <div class="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-3 w-72">
+              <a href="products.html" class="block px-5 py-2 text-sm font-semibold text-appleDark hover:text-appleBlue hover:bg-gray-50 transition-colors">All Products</a>
+              <div class="my-1 border-t border-gray-100"></div>
+              <a href="products.html?category=liso" data-cat-link="liso" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                Li-SOCl2 3.6V
+                <span class="block text-xs text-gray-400">Industrial lithium cells (LS / ER series)</span>
+              </a>
+              <a href="products.html?category=plc" data-cat-link="plc" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                PLC Backup
+                <span class="block text-xs text-gray-400">OMRON · Mitsubishi · Toshiba</span>
+              </a>
+              <a href="products.html?category=coin" data-cat-link="coin" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                Coin Cells
+                <span class="block text-xs text-gray-400">CR / BR button cells</span>
+              </a>
+              <a href="products.html?category=cyl" data-cat-link="cyl" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                Cylindrical Li
+                <span class="block text-xs text-gray-400">18650 · CR123A · CR14250SE</span>
+              </a>
+              <a href="products.html?category=nimh" data-cat-link="nimh" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                NiMH &amp; Rechargeable
+                <span class="block text-xs text-gray-400">VARTA · AA · AAA · 9V</span>
+              </a>
+              <a href="products.html?category=charger" data-cat-link="charger" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                Chargers &amp; Modules
+                <span class="block text-xs text-gray-400">Lifeboat chargers &amp; power modules</span>
+              </a>
+              <a href="products.html?category=general" data-cat-link="general" class="block px-5 py-2 text-sm text-appleMuted hover:text-appleBlue hover:bg-gray-50 transition-colors">
+                Accessories
+                <span class="block text-xs text-gray-400">Carbon cells &amp; shipboard accessories</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="cases.html" class="{{NAV_CASES}} transition-colors">Cases</a>
         <a href="services.html" class="{{NAV_SERVICES}} transition-colors">Services</a>
         <a href="news.html" class="{{NAV_NEWS}} transition-colors">News</a>
@@ -27,7 +66,22 @@
     <div class="px-4 pt-2 pb-6 space-y-1">
       <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_INDEX_M}}">Home</a>
       <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_ABOUT_M}}">About Us</a>
-      <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_PRODUCTS_M}}">Products</a>
+      <details class="block">
+        <summary class="flex items-center justify-between px-3 py-2 rounded-md text-base font-medium cursor-pointer list-none {{NAV_PRODUCTS_M}}">
+          <span>Products</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="pl-4 mt-1 pb-2 space-y-1">
+          <a href="products.html" class="block px-3 py-2 rounded-md text-sm font-medium text-appleMuted hover:bg-gray-50">All Products</a>
+          <a href="products.html?category=liso" data-cat-link="liso" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">Li-SOCl2 3.6V</a>
+          <a href="products.html?category=plc" data-cat-link="plc" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">PLC Backup</a>
+          <a href="products.html?category=coin" data-cat-link="coin" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">Coin Cells</a>
+          <a href="products.html?category=cyl" data-cat-link="cyl" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">Cylindrical Li</a>
+          <a href="products.html?category=nimh" data-cat-link="nimh" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">NiMH &amp; Rechargeable</a>
+          <a href="products.html?category=charger" data-cat-link="charger" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">Chargers &amp; Modules</a>
+          <a href="products.html?category=general" data-cat-link="general" class="block px-3 py-2 rounded-md text-sm text-appleMuted hover:bg-gray-50">Accessories</a>
+        </div>
+      </details>
       <a href="cases.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_CASES_M}}">Cases</a>
       <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_SERVICES_M}}">Services</a>
       <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium {{NAV_NEWS_M}}">News</a>

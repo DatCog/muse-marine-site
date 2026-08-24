@@ -31,6 +31,19 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+
+    // Highlight the active product category in the nav dropdown / mobile menu
+    var category = new URLSearchParams(window.location.search).get('category');
+    if (category) {
+      document.querySelectorAll('[data-cat-link]').forEach(function (link) {
+        if (link.getAttribute('data-cat-link') === category) {
+          link.classList.add('text-appleBlue', 'font-semibold');
+          if (link.closest('details')) {
+            link.classList.add('bg-blue-50');
+          }
+        }
+      });
+    }
   })();
 </script>
 

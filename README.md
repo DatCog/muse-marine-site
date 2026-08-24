@@ -96,6 +96,16 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 
 卡片数据来自《小电池.xlsx》56 行 SKU（商品编码前缀 `17.BG-DC` / `17.BG-DC-NC` 等）。Excel 原件在公司电脑桌面 `C:\Users\Administrator\Desktop\小电池.xlsx`，提取快照在 `work/battery_xlsx_rows.json`（本仓库不含，仅本地工作区）。
 
+### 5.4 导航栏二级菜单（Products 下拉）
+
+导航栏的 Products 带二级下拉（`src/_partials/nav.html`）：
+
+- **桌面端**：悬浮 Products 弹出 7 个分类（`products.html?category=xxx`），带 `data-cat-link` 属性；
+- **移动端**：Products 是可展开的 `<details>` 子菜单；
+- 进入 `products.html?category=xxx` 时，共享脚本（`src/_partials/scripts.html`）会自动高亮对应分类项。
+
+**新增分类时需同步 3 处**：① `products.html` 筛选按钮；② 卡片 `data-category`；③ 导航下拉链接（桌面 + 移动各一次）。
+
 ## 6. 首页核心产品维护
 
 首页 `src/pages/index.html` 中"Core Products."板块的 3 张卡片 = 三大主打品，各自链接到产品页分类：
@@ -136,6 +146,12 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 `.github/workflows/build.yml`：push 到 `main` 后自动 `pnpm install && pnpm build`，产物 `dist/` 上传为 artifact。站点可部署到 Netlify/Vercel/Cloudflare Pages 等任意静态托管（构建命令 `pnpm build`，输出目录 `dist`）。
 
 ## 9. 版本记录
+
+### v1.1.1（2026-08-24）
+
+- 导航栏 Products 新增二级下拉菜单：桌面悬浮展开 7 大分类，移动端可展开子菜单；
+- 进入指定分类页时自动高亮当前分类；
+- 本 README 补充导航维护说明（5.4）。
 
 ### v1.1.0（2026-08-24）
 
