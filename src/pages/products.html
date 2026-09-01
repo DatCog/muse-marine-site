@@ -16,6 +16,7 @@
         <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-3 mb-16 fade-in">
                 <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-6 py-2.5 bg-appleDark text-white text-sm font-medium rounded-full shadow-sm hover:opacity-95 transition-all">All Products</button>
+                <button onclick="filterCategory('gmdss')" id="btn-gmdss" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">GMDSS Safety</button>
                 <button onclick="filterCategory('liso')" id="btn-liso" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">Li-SOCl2 3.6V</button>
                 <button onclick="filterCategory('plc')" id="btn-plc" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">PLC Backup</button>
                 <button onclick="filterCategory('coin')" id="btn-coin" class="filter-btn px-6 py-2.5 bg-white text-appleMuted border border-gray-200 text-sm font-medium rounded-full hover:bg-gray-50 transition-all">Coin Cells</button>
@@ -27,6 +28,186 @@
 
             <!-- Products Grid -->
             <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Jotron TR20 (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">Jotron TR20 Battery</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">EPIRB emergency position-indicating radio beacon battery, class-mandated 4-year replacement.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">EPIRB battery</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">Jotron TR20</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">4-year replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=Jotron-TR20" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jotron X-82615 SART (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-100" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">Jotron X-82615 (SART)</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Lithium metal battery pack for SART search-and-rescue radar transponders.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">SART lithium pack</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">Jotron Tron SART</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">5-year replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=Jotron-X-82615" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Jotron 80059/80060 Two-way VHF (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-200" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">Jotron 80059 / 80060</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Two-way VHF radiotelephone battery packs for GMDSS emergency communication.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">Two-way VHF pack</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">Jotron Tron 2-way</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">4-year replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=Jotron-80059-80060" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NBB-248 JRC JHS-7/14 (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">JRC NBB-248 (JHS-7/14)</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">OEM-matched rechargeable battery for JRC JHS-7/JHS-14 GMDSS handheld VHF radios.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">Handheld VHF pack</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">JRC JHS-7 / JHS-14</span></div>
+                        <div class="flex justify-between"><span>Chemistry:</span><span class="font-semibold text-appleDark text-right">NiMH / Li-ion</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=JRC-NBB-248" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NBB-389 (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-100" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">JRC NBB-389</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">OEM-matched battery pack for JRC GMDSS handheld VHF and portable communication sets.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">Handheld VHF pack</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">JRC GMDSS portable</span></div>
+                        <div class="flex justify-between"><span>Chemistry:</span><span class="font-semibold text-appleDark text-right">NiMH / Li-ion</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=JRC-NBB-389" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Furuno VDR battery (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-200" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">VDR Backup Battery</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Voyage data recorder (VDR) backup battery ensuring black-box recording continuity.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">VDR backup cell</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">Furuno / JRC VDR</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">Mandatory replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=VDR-Backup-Battery" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- McMurdo S4 SART (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">McMurdo S4 SART Battery</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Replacement battery for McMurdo S4 search-and-rescue transponder beacons.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">SART lithium pack</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">McMurdo S4 SART</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">5-year replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=McMurdo-S4-SART" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EPIRB battery generic (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-100" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">EPIRB Battery Pack</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Generic OEM EPIRB battery for major beacon brands — Kannad, ACR, Jotron, McMurdo.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">EPIRB battery</span></div>
+                        <div class="flex justify-between"><span>Brands:</span><span class="font-semibold text-appleDark text-right">Kannad / ACR / Jotron</span></div>
+                        <div class="flex justify-between"><span>Cycle:</span><span class="font-semibold text-appleDark text-right">4-year replacement</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=EPIRB-Battery-Pack" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GMDSS Navtex / AIS battery (GMDSS Safety) -->
+                <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in delay-200" data-category="gmdss">
+                    <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-5 overflow-hidden">
+                        <svg class="w-12 h-12 text-appleMuted hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path></svg>
+                    </div>
+                    <span class="text-[11px] font-semibold text-appleBlue uppercase tracking-wider mb-1.5">GMDSS Safety</span>
+                    <h3 class="text-lg font-bold text-appleDark leading-snug mb-1.5">Navtex / AIS Backup Cell</h3>
+                    <p class="text-appleMuted text-[13px] leading-relaxed mb-5">Internal backup cells for Navtex receivers and AIS transponders requiring periodic swap.</p>
+                    <div class="border-t border-gray-100 pt-3.5 mb-5 text-xs text-appleMuted space-y-1.5">
+                        <div class="flex justify-between"><span>Type:</span><span class="font-semibold text-appleDark text-right">Internal backup cell</span></div>
+                        <div class="flex justify-between"><span>Equipment:</span><span class="font-semibold text-appleDark text-right">Navtex / AIS</span></div>
+                        <div class="flex justify-between"><span>Chemistry:</span><span class="font-semibold text-appleDark text-right">Li-SOCl2 / Li-MnO2</span></div>
+                    </div>
+                    <div class="mt-auto pt-3 border-t border-gray-50">
+                        <a href="contact.html?product=Navtex-AIS-Backup" class="text-appleBlue hover:underline flex items-center text-sm font-medium">
+                            Request Quote <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+                </div>
 
                 <!-- LS14500 (BTT06) (Li-SOCl2 · 3.6V) -->
                 <div class="product-card bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full fade-in" data-category="liso">
@@ -1169,7 +1350,7 @@
 
     var params = new URLSearchParams(window.location.search);
     var cat = params.get('category');
-    if (['liso', 'plc', 'coin', 'cyl', 'nimh', 'charger', 'general'].indexOf(cat) !== -1) {
+    if (['gmdss', 'liso', 'plc', 'coin', 'cyl', 'nimh', 'charger', 'general'].indexOf(cat) !== -1) {
       window.filterCategory(cat);
     }
   })();
