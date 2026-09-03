@@ -4,7 +4,7 @@
 
 ## 1. 项目概况
 
-MUSE MARINE（缪斯海事）公司官网，面向国际船舶行业客户，主打**海事工业电池与船用电子设备**。当前站点内容基于《小电池.xlsx》的 56 个实际 SKU 重建了产品体系，并确定了三大主打产品方向：
+MUSE MARINE（缪斯海事）公司官网，面向国际船舶行业客户，主打**海事工业电池与船用电子设备**。当前站点基于《小电池.xlsx》的 56 个 SKU 重建产品体系，后经两轮扩改（补 GMDSS 分类 + 国产高性价比线、砍充电器/配件），现为 **79 个 SKU、6 大分类**，并确定了三大主打产品方向：
 
 1. **GMDSS 安全电池**（EPIRB/SART/VDR/双向 VHF 强制更换电池，Jotron TR20、X-82615 SART、80059/80060、JRC NBB-248/NBB-389、McMurdo S4 SART 等）
 2. **PLC 内存备份电池**（OMRON CJ1W/CS1W/CPM2A/C200H、三菱 Q6BAT/A6BAT/FX3U/FX2NC、东芝 ER17500V 等带插头电池）
@@ -60,15 +60,13 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 | 分类 id | 按钮文案 | 内容 |
 | --- | --- | --- |
 | `gmdss` | GMDSS Safety | EPIRB/SART/VDR/双向 VHF 强制更换电池（Jotron、JRC、McMurdo 等） |
-| `liso` | Li-SOCl2 3.6V | 工业锂亚电池 LS/ER 系列 |
+| `liso` | Li-SOCl2 3.6V | 工业锂亚电池 LS/ER 系列（进口 Saft/Maxell + 国产 EVE/Fanso） |
 | `plc` | PLC Backup | 欧姆龙/三菱/东芝 PLC 带插头电池 |
 | `coin` | Coin Cells | CR/BR 纽扣电池 |
-| `cyl` | Cylindrical Li | 18650/CR123A/CR14250SE/CR18505 等 |
+| `cyl` | Cylindrical Li | 18650/CR123A/21700/CR2/锂锰柱式/锂离子 等 |
 | `nimh` | NiMH & Rechargeable | VARTA 镍氢、AA/AAA 可充、9V 可充 |
-| `charger` | Chargers & Modules | 救生艇充电器、魏德米勒电源模块 |
-| `general` | Accessories | 通用电池与船用配件 |
 
-分类筛选按钮在 `products.html` 顶部 `section` 里；筛选脚本在文件底部 `<script>`（白名单数组 `['gmdss','liso','plc','coin','cyl','nimh','charger','general']`）。**新增分类时两个地方都要改。**
+分类筛选按钮在 `products.html` 顶部 `section` 里；筛选脚本在文件底部 `<script>`（白名单数组 `['gmdss','liso','plc','coin','cyl','nimh']`）。**新增分类时两个地方都要改。**
 
 ### 5.2 如何新增/修改一个产品
 
@@ -155,6 +153,16 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 
 ## 9. 版本记录
 
+### v1.1.5（2026-09-03）
+
+- **删除 `charger`（Chargers & Modules）与 `general`（Accessories）两个分类**：移除筛选按钮、12 张卡片、导航下拉链接（桌面 + 移动）、白名单项，同步清理首页案例标题/新闻摘要与 `build.mjs` SEO 中 charger/shipboard accessories 相关文案；
+- **补 26 张国产高性价比 SKU 卡片**（打价格差，UNICELL 在售同款）：
+  - `gmdss` +2（Furuno BP-1207、Sailor SP3520）；
+  - `liso` +10（国产锂亚 ER14250/ER14505/ER17335/ER17505/ER18505/ER26500/ER34615/ER9V/ER14335/ER10450，与进口 Saft/Maxell 并列）；
+  - `coin` +4（CR2025/CR2016/CR2430/CR2320）；
+  - `cyl` +10（锂锰柱式 CR2/CR1/3N/CR14250/CR14505/CR17335/CR17450/CR17505 + 锂离子 21700/14500/16340）；
+- 最终产品页为 **79 个 SKU / 6 大分类**（gmdss/liso/plc/coin/cyl/nimh），hero 描述与 SEO 数字同步为 70+。
+
 ### v1.1.4（2026-08-31）
 
 - **新增 GMDSS Safety 分类**（`gmdss`），产品页加入 9 张 GMDSS 安全电池卡片（EPIRB/SART/VDR/双向 VHF，含 Jotron TR20、X-82615 SART、80059/80060、JRC NBB-248/NBB-389、McMurdo S4 SART 等），同步更新筛选按钮、白名单数组、导航下拉（桌面 + 移动）；
@@ -198,6 +206,6 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 
 1. **替换占位联系方式**：真实电话、邮箱、地址、域名（见第 7 节）；
 2. **News 文章页**：新闻卡片目前都指向 `news.html` 本身，需建独立文章页；
-3. **产品图片**：56 个 SKU 目前用 SVG 示意图，后续可逐品类替换成真实产品图（建议先做三大主打品）；若需要 AI 生图或批量配图，需配置生图通道或由用户提供素材；
+3. **产品图片**：79 个 SKU 目前用 SVG 示意图，后续可逐品类替换成真实产品图（建议先做三大主打品）；若需要 AI 生图或批量配图，需配置生图通道或由用户提供素材；
 4. **中英文双语**：如需加中文版，可加 `lang` 参数或独立中文页面；
 5. **与单据系统联动**：客户询价后可用 sg-trade-docs 系统直接出 Quotation/Invoice/DO。

@@ -34,8 +34,8 @@ const pages = {
   },
   'products.html': {
     title: 'Marine Industrial Batteries & GMDSS Safety Cells | MUSE MARINE',
-    description: "Explore MUSE MARINE's 60+ marine industrial battery SKUs - GMDSS safety batteries (EPIRB, SART, VDR), Li-SOCl2 cells, PLC memory backup batteries, coin cells, rechargeable packs and shipboard accessories. IMPA certified.",
-    keywords: 'marine battery, GMDSS battery, EPIRB battery, SART battery, PLC backup battery, Li-SOCl2, LS14500, coin cell, ship electronics, IMPA marine products, MUSE MARINE',
+    description: "Explore MUSE MARINE's 70+ marine industrial battery SKUs - GMDSS safety batteries (EPIRB, SART, VDR), Li-SOCl2 cells, PLC memory backup batteries, coin cells, cylindrical lithium and rechargeable packs. IMPA certified.",
+    keywords: 'marine battery, GMDSS battery, EPIRB battery, SART battery, PLC backup battery, Li-SOCl2, ER14505, coin cell, cylindrical lithium, ship electronics, IMPA marine products, MUSE MARINE',
     active: 'products',
   },
   'cases.html': {
