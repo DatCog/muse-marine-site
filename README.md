@@ -161,6 +161,13 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 - **关于页去假**（`about.html`）：删除假里程碑（2016 成立 / 2020 认证 / 500+ 船队 / 三地仓）与假认证（CCS / CE / ISO9001 / IMPA Compliant），改为「How We Work」三步流程（匹配 / 采购核验 / 全球发货）与「随货提供文档」（UN38.3 / MSDS / IMPA 编码 / DDP）。
 - **待办**：`cases.html`（假案例 + 假客户证言 + 500+/12M+ 假数据）与 `services.html`（三地仓 / 24×7 假承诺）尚未去假，属下一批。
 
+### v1.1.7（2026-09-03）
+
+- **案例页去假 + 重定位**（`cases.html`）：删除假客户证言（Capt. Magnus Lindstrom）、假数据（500+ 船队 / 12M 海里 / 99.9% 可靠率）、3 个假案例（15,000 TEU 锂电替换 / LNG 油轮 ATEX / 北海 OSV AGM），整页重写为「Applications & Use Cases」——用真实行业事实（~95,000 艘商船 2029 前 GMDSS 升级、4-5 年更换周期、IMPA Class 17）＋ 六个应用场景卡片（对应六大分类）；
+- **服务页去假**（`services.html`）：删除假承诺（24/7 支持、Rotterdam/Singapore/Shanghai 三地仓），改为诚实的「文档＋物流＋合规」支持（UN38.3 / MSDS / IMPA 匹配、小批量空海运、DDP 门到门）；FAQ 澄清 IMPA 是编码而非认证；表单「12 小时响应」改为「一个工作日内回复」；
+- **联系页去假**（`contact.html`）：删除假仓库点（Rotterdam/Singapore/Shanghai/Houston）、24/7 热线、regional hubs / next-port-of-call 话术，改为「交付方式」（空运 / 海运 LCL / DDP / 电池小包专线）；响应承诺统一为「一个工作日」；
+- **导航与 SEO**：`nav.html` 桌面＋移动端「Cases」标签改为「Applications」；`build.mjs` cases/services 页 title/description/keywords 同步去假。
+
 ### v1.1.5（2026-09-03）
 
 - **删除 `charger`（Chargers & Modules）与 `general`（Accessories）两个分类**：移除筛选按钮、12 张卡片、导航下拉链接（桌面 + 移动）、白名单项，同步清理首页案例标题/新闻摘要与 `build.mjs` SEO 中 charger/shipboard accessories 相关文案；

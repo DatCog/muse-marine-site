@@ -39,15 +39,15 @@ const pages = {
     active: 'products',
   },
   'cases.html': {
-    title: 'Global Marine Power & Electronics Cases | MUSE MARINE',
-    description: 'Discover how global fleet owners and shipyards deploy MUSE MARINE small industrial batteries and electronics for flawless, highly certified maritime operations.',
-    keywords: 'marine battery cases, shipowner power system reviews, vessel electronics applications, ship emergency backup power testimonials, MUSE MARINE',
+    title: 'Marine Battery Applications & Use Cases | MUSE MARINE',
+    description: 'The scenarios MUSE MARINE supplies for — GMDSS safety batteries (EPIRB, SART, VDR), PLC backup, Li-SOCl2, coin and cylindrical cells — matched to IMPA codes with UN38.3 and MSDS documentation.',
+    keywords: 'GMDSS battery replacement, EPIRB battery, SART battery, PLC backup battery, Li-SOCl2 cell, marine battery applications, IMPA code match, MUSE MARINE',
     active: 'cases',
   },
   'services.html': {
-    title: 'Marine Battery Service & Support | MUSE MARINE',
-    description: 'Get professional technical support, SDS manuals, and maintenance services for MUSE MARINE small industrial ship batteries and marine electronics.',
-    keywords: 'marine battery service, ship battery maintenance, marine electronics support, IMPA battery MSDS, MUSE MARINE',
+    title: 'Marine Battery Documentation & Logistics | MUSE MARINE',
+    description: 'UN38.3 test summaries, MSDS sheets, IMPA code matching and small-batch air or ocean freight with DDP delivery for marine industrial batteries.',
+    keywords: 'UN38.3 marine battery, MSDS marine battery, IMPA code match, dangerous goods freight, DDP marine battery delivery, MUSE MARINE',
     active: 'services',
   },
   'news.html': {
