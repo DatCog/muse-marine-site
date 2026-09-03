@@ -1,40 +1,36 @@
 <main>
-        <!-- 2. 首屏大图轮播区 (Apple风极致留白 + 暗色背景自适应) -->
-        <section class="relative h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0c] mt-16">
+        <!-- 2. 首屏大图轮播区 -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden bg-appleDark mt-16">
             <!-- 轮播图幻灯片 -->
             <div id="carousel" class="relative w-full h-full" role="region" aria-roledescription="carousel" aria-label="Featured highlights">
-                <!-- 幻灯片 1 -->
+                <!-- 幻灯片 1：定位 -->
                 <div class="carousel-item absolute inset-0 opacity-100 z-10">
-                    <img src="assets/images/hero-1.jpg" alt="MUSE MARINE Industrial Ship Battery Technology" class="object-cover w-full h-full opacity-50">
+                    <img src="assets/images/hero-1.jpg" alt="MUSE MARINE Marine Industrial Battery Supplier" class="object-cover w-full h-full opacity-40">
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold mb-3">Premium Energy</span>
-                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Reliable Power at Sea.</h1>
-                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">Industry-leading marine small batteries designed for extreme maritime conditions.</p>
-                        
-                        <!-- 优化后的 “Explore Products” 按钮 -->
-                        <a href="products.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:bg-gray-50 hover:shadow-xl transition-all duration-300 transform shadow-md">
+                        <span class="text-xs uppercase tracking-widest text-appleEmerald font-semibold mb-3">Marine Battery Specialist</span>
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Power That Keeps Vessels Survey-Ready.</h1>
+                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">GMDSS safety batteries, Li-SOCl2 cells and PLC backup — sourced, quality-checked and shipped worldwide.</p>
+                        <a href="products.html" class="inline-flex items-center justify-center px-10 py-4 bg-appleAccent text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:shadow-xl transition-all duration-300 transform shadow-md">
                             Explore Products
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
                 </div>
-                <!-- 幻灯片 2 -->
+                <!-- 幻灯片 2：GMDSS 2029 强制更换窗口 -->
                 <div class="carousel-item absolute inset-0 opacity-0 z-0">
-                    <img src="assets/images/hero-2.jpg" alt="Advanced Ship GMDSS Electronics" class="object-cover w-full h-full opacity-50">
+                    <img src="assets/images/hero-2.jpg" alt="GMDSS Safety Battery Replacement Deadline" class="object-cover w-full h-full opacity-40">
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold mb-3">Communication & Electronics</span>
-                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Advanced Ship Electronics.</h1>
-                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">Ensuring seamless communication and operation across the global fleet.</p>
-                        
-                        <!-- 幻灯片 2 对应的按钮 -->
-                        <a href="products.html" class="inline-flex items-center justify-center px-10 py-4 bg-white text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:bg-gray-50 hover:shadow-xl transition-all duration-300 transform shadow-md">
-                            Explore Products
+                        <span class="text-xs uppercase tracking-widest text-appleEmerald font-semibold mb-3">GMDSS 2029 Compliance</span>
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight leading-none">Be Ready for the Mandatory Swap.</h1>
+                        <p class="text-base md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">EPIRB, SART and VDR batteries follow a 4–5 year replacement cycle — we keep your fleet ahead of the 2029 deadline.</p>
+                        <a href="products.html?category=gmdss" class="inline-flex items-center justify-center px-10 py-4 bg-appleAccent text-appleDark rounded-full font-semibold text-sm hover:scale-105 active:scale-95 hover:shadow-xl transition-all duration-300 transform shadow-md">
+                            GMDSS Safety Batteries
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- 左右切换控制键 -->
             <button id="prev-slide" class="absolute left-6 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-colors z-30" aria-label="Previous Slide">
                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
@@ -45,7 +41,7 @@
             <button id="carousel-pause" type="button" class="absolute top-24 right-6 text-white/60 hover:text-white transition-colors z-30" aria-label="Pause slideshow" aria-pressed="false">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6"/></svg>
             </button>
-            
+
             <!-- 底部导航指示器 -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-30">
                 <button type="button" class="indicator w-12 h-1 rounded-full bg-white transition-all duration-300" aria-label="Go to slide 1"></button>
@@ -53,43 +49,54 @@
             </div>
         </section>
 
-        <!-- 3. Core Product Showcase (核心产品展示 - 卡片网格布局) -->
+        <!-- 信任条：真实能力 -->
+        <section class="bg-appleDark border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-gray-300">
+                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-appleEmerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>IMPA code aligned</span>
+                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-appleEmerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>UN38.3 &amp; MSDS included</span>
+                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-appleEmerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Small-batch air &amp; sea freight</span>
+                <span class="flex items-center gap-2"><svg class="w-4 h-4 text-appleEmerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Global DDP door-to-door</span>
+            </div>
+        </section>
+
+        <!-- 3. Core Product Showcase (核心产品展示) -->
         <section class="py-24 px-4 max-w-7xl mx-auto">
             <div class="text-center mb-16 fade-in">
+                <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">What We Supply</span>
                 <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Core Products.</h2>
-                <p class="text-appleMuted text-lg max-w-2xl mx-auto">Engineered for durability, meeting strict international IMPA and SOLAS maritime standards.</p>
+                <p class="text-appleMuted text-lg max-w-2xl mx-auto">A focused range of industrial small batteries and safety cells, matched to IMPA codes and ready to ship.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- 主打品 1：GMDSS 安全电池（强制替换电池） -->
                 <a href="products.html?category=gmdss" class="block fade-in">
                     <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col h-full text-center">
                         <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
-                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-12 h-12 text-appleBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 2a3 3 0 00-3 3v7a3 3 0 006 0V5a3 3 0 00-3-3zm-7 8a7 7 0 0014 0M12 19v3"></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">GMDSS Safety Batteries</h3>
                         <p class="text-xs text-appleBlue font-semibold uppercase tracking-wider mb-3">EPIRB | SART | VDR | Two-way VHF</p>
                         <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                            Class-mandated replacement batteries for emergency position beacons, search-and-rescue transponders and voyage data recorders — the 4-5 year scheduled swap that keeps vessels survey-compliant.
+                            Class-mandated replacement batteries for emergency beacons, transponders and voyage data recorders — the 4–5 year scheduled swap that keeps vessels survey-compliant.
                         </p>
                         <span class="mt-auto text-appleBlue font-semibold text-sm hover:underline">Learn more ></span>
                     </div>
                 </a>
-                
+
                 <!-- 主打品 2：船舶自动化与 PLC 备份电池 -->
                 <a href="products.html?category=plc" class="block fade-in delay-100">
                     <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col h-full text-center">
                         <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
-                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-12 h-12 text-appleBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">PLC Memory Backup Batteries</h3>
                         <p class="text-xs text-appleBlue font-semibold uppercase tracking-wider mb-3">OMRON CJ1W/CS1W/CPM2A | Mitsubishi Q6BAT/A6BAT/FX3U</p>
                         <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                            OEM-matched batteries with pre-wired plugs for bridge automation, engine control and PLC systems. Exceptional temperature resilience guarantees zero data loss in critical circuits.
+                            OEM-matched batteries with pre-wired plugs for bridge automation, engine control and PLC systems — zero data loss in critical circuits.
                         </p>
                         <span class="mt-auto text-appleBlue font-semibold text-sm hover:underline">Learn more ></span>
                     </div>
@@ -97,9 +104,9 @@
 
                 <!-- 主打品 3：工业锂亚电池 -->
                 <a href="products.html?category=liso" class="block fade-in delay-200">
-                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col items-center h-full text-center">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 flex flex-col h-full text-center">
                         <div class="w-full aspect-[4/3] bg-appleGray rounded-2xl flex items-center justify-center mb-6 overflow-hidden">
-                            <svg class="w-12 h-12 text-appleMuted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-12 h-12 text-appleBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>
@@ -114,138 +121,105 @@
             </div>
         </section>
 
-        <!-- 4. Selected Global Cases (精选全球工程案例) -->
+        <!-- 4. Why MUSE MARINE (能力板块，替换原来的假案例) -->
         <section class="py-24 px-4 bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 fade-in">
-                    <div>
-                        <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">Proven Track Record</span>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Global Deployments.</h2>
-                        <p class="text-appleMuted text-lg max-w-xl">Trusted maritime power and electronics integrations in challenging oceanic tasks.</p>
-                    </div>
-                    <a href="cases.html" class="mt-4 md:mt-0 inline-flex items-center text-appleBlue font-semibold hover:text-blue-700 hover:underline transition-all group">
-                        Explore all success stories
-                        <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
+                <div class="text-center mb-16 fade-in">
+                    <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">Why Work With Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">A Supplier Who Knows the Ship.</h2>
+                    <p class="text-appleMuted text-lg max-w-2xl mx-auto">We are not a general electronics vendor. We focus on one narrow line and do it properly — so chandlers and fleet buyers get the right part, fast.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 案例 1 -->
-                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in">
-                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
-                            <img src="assets/images/case-1.jpg" alt="Container Ship Integration" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 能力 1：懂船 -->
+                    <div class="bg-appleGray rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full fade-in">
+                        <div class="w-12 h-12 rounded-2xl bg-appleBlue/10 text-appleBlue flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.832 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.168 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Ocean Vessel Fleet</span>
-                            <h3 class="text-xl font-bold mb-3 text-appleDark">150,000 DWT Container Fleet Backup System Upgrade</h3>
-                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                                Fully retrofitted 45 large container carriers with our ultra-reliable GMDSS & PLC backup lithium batteries, ensuring zero uninterrupted navigation communication.
-                            </p>
-                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
-                                View case details
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-appleDark">We Speak IMPA</h3>
+                        <p class="text-appleMuted text-sm leading-relaxed">
+                            Every part is matched to its IMPA code and GMDSS replacement cycle. You send the model or code, we return the exact-fit battery — no guesswork, no wrong part.
+                        </p>
                     </div>
 
-                    <!-- 案例 2 -->
-                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in delay-100">
-                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
-                            <img src="assets/images/case-2.jpg" alt="Offshore Drilling Platform" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- 能力 2：快 -->
+                    <div class="bg-appleGray rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full fade-in delay-100">
+                        <div class="w-12 h-12 rounded-2xl bg-appleAccent/10 text-appleAccent flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Offshore & Energy</span>
-                            <h3 class="text-xl font-bold mb-3 text-appleDark">North Sea Floating Drilling Platform Power Overhaul</h3>
-                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                                Engineered a specialized, wide-temperature-tolerant battery solution to maintain sensor logging accuracy on high-vibration engine controls in sub-zero environments.
-                            </p>
-                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
-                                View case details
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-appleDark">Small Batches, Fast</h3>
+                        <p class="text-appleMuted text-sm leading-relaxed">
+                            No 50-unit minimum. We ship single and small-batch orders by air or sea, DDP door-to-door, with UN38.3 and MSDS documents included so customs never stalls your delivery.
+                        </p>
                     </div>
 
-                    <!-- 案例 3 -->
-                    <div class="group relative bg-appleGray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full fade-in delay-200">
-                        <div class="aspect-[16/10] w-full overflow-hidden bg-gray-200">
-                            <img src="assets/images/case-3.jpg" alt="Lifeboat System Verification" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <!-- 能力 3：专 -->
+                    <div class="bg-appleGray rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full fade-in delay-200">
+                        <div class="w-12 h-12 rounded-2xl bg-appleBlue/10 text-appleBlue flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <div class="p-8 flex flex-col flex-grow">
-                            <span class="text-xs font-semibold text-appleMuted uppercase tracking-wider mb-2">Safety Electronics</span>
-                            <h3 class="text-xl font-bold mb-3 text-appleDark">SOLAS Compliant Lifeboat CD4212 Charger Delivery</h3>
-                            <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                                Standardized and supplied emergency electrical power systems for state-of-the-art rescue boats, establishing top safety metrics on premium cruise lines.
-                            </p>
-                            <a href="cases.html" class="mt-auto text-appleBlue font-semibold text-sm inline-flex items-center group-hover:underline">
-                                View case details
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            </a>
-                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-appleDark">One Narrow Line, Done Right</h3>
+                        <p class="text-appleMuted text-sm leading-relaxed">
+                            Industrial small batteries and GMDSS safety cells only. That focus means deeper stock knowledge, sharper sourcing, and honest pricing against local resellers.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Environmental Responsibility & Sustainability (环保与可持续发展 - 新增板块) -->
+        <!-- 5. Environmental Responsibility & Sustainability -->
         <section class="py-24 px-4 bg-appleGreen text-white border-t border-emerald-900 overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <!-- 左侧：文字品牌宣言 (带有淡淡的绿色微光效果) -->
                     <div class="lg:col-span-5 fade-in">
-                        <span class="text-xs uppercase tracking-widest text-appleEmerald font-semibold block mb-3">Green Maritime Initiative</span>
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">Respecting the Ocean.<br>Sustaining the Future.</h2>
+                        <span class="text-xs uppercase tracking-widest text-appleEmerald font-semibold block mb-3">Long-Life Chemistry</span>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">Fewer Swaps.<br>Less Waste.</h2>
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-                            At MUSE MARINE, eco-responsibility is not a checklist — it is our fundamental design directive. We protect our oceans and environment by engineering clean, long-cycle energy and minimizing ecological footprints at every voyage.
+                            The lithium cells we supply are mercury-, cadmium- and lead-free, with shelf lives of up to ten years. Fewer replacements mean less packaging, less shipping and less waste on board.
                         </p>
-                        <!-- 极简可持续发展指标 -->
                         <div class="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
                             <div>
                                 <div class="text-2xl md:text-3xl font-bold text-appleEmerald mb-1">100%</div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider">Mercury & Cadmium Free</div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wider">Mercury &amp; Cadmium Free</div>
                             </div>
                             <div>
                                 <div class="text-2xl md:text-3xl font-bold text-appleEmerald mb-1">10 Years</div>
-                                <div class="text-xs text-gray-400 uppercase tracking-wider">Average Cell Shelf Life</div>
+                                <div class="text-xs text-gray-400 uppercase tracking-wider">Typical Cell Shelf Life</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 右侧：三个精细化环保承诺卡片 -->
                     <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- 环保承诺 1 -->
                         <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-100 flex flex-col h-full">
                             <div class="w-10 h-10 rounded-full bg-appleEmerald/10 flex items-center justify-center mb-6 text-appleEmerald">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-bold mb-2">Clean Battery Chemistry</h3>
+                            <h3 class="text-lg font-bold mb-2">Clean Chemistry</h3>
                             <p class="text-sm text-gray-300 leading-relaxed">
-                                Our lithium cells completely eliminate harmful heavy metals like cadmium, lead, and mercury, ensuring zero marine environmental pollution in case of emergencies.
+                                Our lithium cells eliminate cadmium, lead and mercury, avoiding harmful heavy-metal discharge in the marine environment.
                             </p>
                         </div>
 
-                        <!-- 环保承诺 2 -->
                         <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-200 flex flex-col h-full">
                             <div class="w-10 h-10 rounded-full bg-appleEmerald/10 flex items-center justify-center mb-6 text-appleEmerald">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-bold mb-2">Global Recycling Program</h3>
+                            <h3 class="text-lg font-bold mb-2">Responsible Disposal</h3>
                             <p class="text-sm text-gray-300 leading-relaxed">
-                                We run active hazardous collection partnerships at key global ports. This ensures discarded lithium back-ups are safely recovered and responsibly re-processed.
+                                We provide handling and disposal guidance with every shipment so spent cells are collected and recycled through certified channels, not thrown overboard.
                             </p>
                         </div>
 
-                        <!-- 环保承诺 3 -->
                         <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-appleEmerald/30 hover:bg-white/10 transition-all duration-300 fade-in delay-300 flex flex-col h-full sm:col-span-2">
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                                 <div>
-                                    <h3 class="text-lg font-bold mb-2">Sustainable Carbon Offsets & Life-cycle Design</h3>
+                                    <h3 class="text-lg font-bold mb-2">Designed for a Long Duty Cycle</h3>
                                     <p class="text-sm text-gray-300 leading-relaxed">
-                                        By engineering battery packs with up to 10-year shelf storage, we significantly reduce the frequency of spare replacements, lowering manufacturing waste, supply shipping carbon, and overall maritime impact.
+                                        Ten-year shelf life and low self-discharge mean fewer spares ordered, fewer freight movements, and a smaller overall carbon footprint for the fleet.
                                     </p>
                                 </div>
                             </div>
@@ -255,16 +229,16 @@
             </div>
         </section>
 
-        <!-- 6. Latest News & Insights (最新动态与行业见解) -->
+        <!-- 6. Latest News & Insights (真实行业趋势) -->
         <section class="py-24 px-4 bg-appleGray border-t border-gray-100">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 fade-in">
                     <div>
                         <span class="text-xs uppercase tracking-widest text-appleBlue font-semibold block mb-3">Industry Hub</span>
                         <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Latest Insights.</h2>
-                        <p class="text-appleMuted text-lg max-w-xl">Stay tuned for international maritime certification news, technological updates, and product launches.</p>
+                        <p class="text-appleMuted text-lg max-w-xl">Regulatory timelines, decarbonisation and e-procurement — what matters for marine battery buyers.</p>
                     </div>
-                    <a href="news.html" class="mt-4 md:mt-0 inline-flex items-center text-appleBlue font-semibold hover:text-blue-700 hover:underline transition-all group">
+                    <a href="news.html" class="mt-4 md:mt-0 inline-flex items-center text-appleBlue font-semibold hover:underline transition-all group">
                         Browse all news articles
                         <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
@@ -274,17 +248,17 @@
                     <!-- 新闻 1 -->
                     <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in">
                         <div class="flex items-center space-x-2 mb-4">
-                            <span class="px-2.5 py-1 bg-blue-50 text-appleBlue text-xs font-semibold rounded-full uppercase">Compliance</span>
+                            <span class="px-2.5 py-1 bg-appleBlue/10 text-appleBlue text-xs font-semibold rounded-full uppercase">Compliance</span>
                             <span class="text-xs text-appleMuted">May 12, 2026</span>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
-                            <a href="news.html">MUSE MARINE Batteries Pass Enhanced SOLAS Safety Certification</a>
+                            <a href="news.html">The GMDSS 2029 Deadline: What It Means for Safety Batteries</a>
                         </h3>
                         <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                            We are proud to announce that our GMDSS safety batteries and custom backup batteries passed the stringent upgraded maritime authority compliance standard successfully.
+                            IMO MSC.511(105) sets the clock for a mandatory GMDSS upgrade across the commercial fleet — triggering a wave of EPIRB, SART and VDR battery replacements.
                         </p>
                         <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
-                            Read article 
+                            Read article
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </article>
@@ -292,17 +266,17 @@
                     <!-- 新闻 2 -->
                     <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in delay-100">
                         <div class="flex items-center space-x-2 mb-4">
-                            <span class="px-2.5 py-1 bg-green-50 text-green-600 text-xs font-semibold rounded-full uppercase">Technology</span>
+                            <span class="px-2.5 py-1 bg-appleAccent/10 text-appleAccent text-xs font-semibold rounded-full uppercase">Regulation</span>
                             <span class="text-xs text-appleMuted">April 28, 2026</span>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
-                            <a href="news.html">Next-Generation wide-temperature Marine Small Cells Developed</a>
+                            <a href="news.html">IMO Decarbonisation: The CII and EEXI Timeline</a>
                         </h3>
                         <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                            Innovating next-gen chemistry to secure an unprecedented 10-year storage shelf-life for safety systems located on harsh remote ocean buoys.
+                            From CII ratings to the 2027 carbon-pricing framework, efficiency pressure is pushing fleets to rethink backup power and onboard instrumentation.
                         </p>
                         <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
-                            Read article 
+                            Read article
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </article>
@@ -310,17 +284,17 @@
                     <!-- 新闻 3 -->
                     <article class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full fade-in delay-200">
                         <div class="flex items-center space-x-2 mb-4">
-                            <span class="px-2.5 py-1 bg-purple-50 text-purple-600 text-xs font-semibold rounded-full uppercase">Global Expo</span>
+                            <span class="px-2.5 py-1 bg-appleBlue/10 text-appleBlue text-xs font-semibold rounded-full uppercase">Procurement</span>
                             <span class="text-xs text-appleMuted">April 15, 2026</span>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-appleDark hover:text-appleBlue transition-colors">
-                            <a href="news.html">Highlighting Key Marine Equipment Innovations at Posidonia 2026</a>
+                            <a href="news.html">Digital Procurement Is Reshaping the Chandlery Trade</a>
                         </h3>
                         <p class="text-appleMuted text-sm leading-relaxed mb-6">
-                            Visit our engineering team as we present specialized automation hardware, PLC replacements, and modern intelligent power controllers.
+                            Platforms like Moscord and ShipServ are disintermediating marine supply. Here is where a specialist supplier still wins on service and speed.
                         </p>
                         <a href="news.html" class="mt-auto text-sm text-appleBlue font-semibold hover:underline inline-flex items-center">
-                            Read article 
+                            Read article
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </article>
@@ -328,15 +302,14 @@
             </div>
         </section>
 
-        <!-- 7. Brief About/Teaser Section (导流板块，闭环链接跳转) -->
+        <!-- 7. Brief About/Teaser Section -->
         <section class="bg-white py-24 px-4 border-t border-gray-100">
             <div class="max-w-4xl mx-auto text-center fade-in">
-                <h2 class="text-3xl font-bold mb-6 text-appleDark">Designed for the Ocean.</h2>
+                <h2 class="text-3xl font-bold mb-6 text-appleDark">A Marine Battery Supplier Built for Chandlers.</h2>
                 <p class="text-xl text-appleMuted leading-relaxed mb-8">
-                    Since our founding, MUSE MARINE has been dedicated to providing the highest quality marine equipment. 
-                    From industrial batteries to advanced navigation electronics, our products are trusted by fleets worldwide.
+                    MUSE MARINE supplies industrial small batteries and GMDSS safety cells to chandlers, ship managers and fleet buyers — with IMPA-matched sourcing, fast small-batch delivery and honest pricing.
                 </p>
-                <a href="about.html" class="inline-flex items-center text-appleBlue hover:text-blue-700 font-semibold text-lg hover:underline transition-all">
+                <a href="about.html" class="inline-flex items-center text-appleBlue hover:text-appleDark font-semibold text-lg hover:underline transition-all">
                     Read our story
                     <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>

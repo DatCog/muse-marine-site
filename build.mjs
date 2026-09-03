@@ -27,14 +27,14 @@ const pages = {
     active: 'index',
   },
   'about.html': {
-    title: 'About MUSE MARINE | Leading Ship Battery Manufacturer',
-    description: "Discover MUSE MARINE's legacy in engineering high-reliability marine small batteries, shipboard electronics, and IMPA compliant power solutions globally.",
-    keywords: 'about MUSE MARINE, marine battery manufacturer, shipboard battery legacy, maritime power equipment, IMPA compliance',
+    title: 'About MUSE MARINE | Specialist Marine Battery Supplier',
+    description: "MUSE MARINE sources and supplies industrial small batteries and GMDSS safety cells for chandlers, ship managers and fleet buyers — IMPA code-matched with UN38.3 and MSDS documentation.",
+    keywords: 'about MUSE MARINE, marine battery supplier, GMDSS battery sourcing, IMPA code match, maritime power equipment',
     active: 'about',
   },
   'products.html': {
     title: 'Marine Industrial Batteries & GMDSS Safety Cells | MUSE MARINE',
-    description: "Explore MUSE MARINE's 70+ marine industrial battery SKUs - GMDSS safety batteries (EPIRB, SART, VDR), Li-SOCl2 cells, PLC memory backup batteries, coin cells, cylindrical lithium and rechargeable packs. IMPA certified.",
+    description: "Explore MUSE MARINE's 70+ marine industrial battery SKUs - GMDSS safety batteries (EPIRB, SART, VDR), Li-SOCl2 cells, PLC memory backup batteries, coin cells, cylindrical lithium and rechargeable packs. IMPA code-matched.",
     keywords: 'marine battery, GMDSS battery, EPIRB battery, SART battery, PLC backup battery, Li-SOCl2, ER14505, coin cell, cylindrical lithium, ship electronics, IMPA marine products, MUSE MARINE',
     active: 'products',
   },

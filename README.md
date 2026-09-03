@@ -153,6 +153,14 @@ $pnpm = "C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\depe
 
 ## 9. 版本记录
 
+### v1.1.6（2026-09-03）
+
+- **全站配色重设计**（`tailwind.config.js`）：弃用 Apple 黑白 + 通用企业蓝，改为海洋系配色 —— `appleDark` 深海蓝 `#0A2540`、`appleBlue` 海洋青 `#0E7C86`、新增 `appleAccent` 琥珀 `#F59E0B`（CTA/强调）、`appleGray` 雾白 `#F6F8FA`、`appleMuted` 石板灰 `#475569`、`appleEmerald` 青绿 `#2DD4BF`、`appleGreen` 深青绿 `#0F3D36`；footer 与首页 hero 的硬编码颜色同步改为深海蓝。
+- **定位翻转「制造商 → 专业供应商」**：`build.mjs` about 页 title/description/keywords 由 `Manufacturer` 改为 `Specialist Marine Battery Supplier`；首页、关于页全文改写为诚实定位（懂船 / 快 / 专）。
+- **首页去假**（`index.html`）：删除 3 个假案例（15 万 DWT 集装箱船队 / 北海钻井平台 / 救生艇充电器），替换为「Why Work With Us」能力板块（IMPA 匹配 / 小批量快发 / 专注单线）；删除 2 条假新闻（通过 SOLAS 认证 / 新一代研发），替换为 3 条真实行业趋势（GMDSS 2029 / IMO 脱碳 / 数字化采购）；新增首屏信任条（IMPA 对齐 · UN38.3+MSDS · 小批量空海运 · DDP 门到门）。
+- **关于页去假**（`about.html`）：删除假里程碑（2016 成立 / 2020 认证 / 500+ 船队 / 三地仓）与假认证（CCS / CE / ISO9001 / IMPA Compliant），改为「How We Work」三步流程（匹配 / 采购核验 / 全球发货）与「随货提供文档」（UN38.3 / MSDS / IMPA 编码 / DDP）。
+- **待办**：`cases.html`（假案例 + 假客户证言 + 500+/12M+ 假数据）与 `services.html`（三地仓 / 24×7 假承诺）尚未去假，属下一批。
+
 ### v1.1.5（2026-09-03）
 
 - **删除 `charger`（Chargers & Modules）与 `general`（Accessories）两个分类**：移除筛选按钮、12 张卡片、导航下拉链接（桌面 + 移动）、白名单项，同步清理首页案例标题/新闻摘要与 `build.mjs` SEO 中 charger/shipboard accessories 相关文案；
